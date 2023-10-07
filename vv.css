@@ -1,0 +1,434 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/*---All PAGE---*/
+.all_page_bg{
+    background-color: #fff;
+}
+
+/*--Nav BAR Page*/
+#nav_h1_text{
+    color: #20b0c6;
+    text-shadow: 3px 3px 3px #000;
+    font-size: 36px;
+    font-family: 'Sono', sans-serif;
+    font-weight: bold;
+    border-width: 2px;
+    border-color: #e2d715;
+    border-style:double;
+    
+    padding: 5px;
+}
+
+.like_button{
+    color: #000000;
+    background-color: #6cff80;
+    border-style: unset;
+    border-width: 2px;
+    border-color: #983a9b;
+    height: 30px;
+    width: 50px;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.reset_button{
+  color: #070000;
+  background-color: grey;
+  border-style: unset;
+  border-width: 2px;
+  border-color: #983a9b;
+  height: 30px;
+  width: 50px;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.nav_text_el {
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.dropdown_items{
+    color: #000;
+    font-family: 'Gill Sans',sans-serif;
+}
+
+/*Category page*/
+
+.Category_h1{
+    color: #5db0ef;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 15px;
+    text-shadow: 2px 2px 5px #07fb30;
+}
+.full_container{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding:25px 20px;
+  }
+  
+  .full_container .heading{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color:#334;
+  }
+  
+  .full_container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap:20px;
+  }
+  
+  .full_container .box-container .box{
+    background-color: #fff;
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #00000033;
+    display: none;
+  }
+  
+  .full_container .box-container .box:nth-child(1),
+  .full_container .box-container .box:nth-child(2),
+  .full_container .box-container .box:nth-child(3){
+    display: inline-block;
+  }
+  
+  .full_container .box-container .box .image_edit{
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 250px;
+    border-radius: 5px;
+  }
+  
+  .full_container .box-container .box .image_edit img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition-delay: height 2s;
+  }
+  
+  .full_container .box-container .box:hover .image_edit img{
+    transform: scale(1.1);
+  }
+  
+  .full_container .box-container .box .content_edit h3{
+    font-size: 20px;
+    color:#e70000;
+    text-align: center;
+  }
+  
+  .full_container .box-container .box .content_edit p{
+    font-size: 15px;
+    color:#6b6262;
+    line-height: 2;
+    padding:15px 0;
+  }
+  
+  .full_container .box-container .box .content_edit {
+    display: inline-block;
+    padding:10px 30px;
+    border:1px solid #334;
+    color:#334;
+    font-size: 16px;
+  }
+  
+  .full_container .box-container .box .content_edit .btn:hover{
+    background-color: crimson;
+    border-color: crimson;
+    color:#fff;
+  }
+  
+  .full_container .box-container .box .content_edit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top:1px solid #334;
+  }
+  
+  .full_container .box-container .box .content_edit{
+    font-size: 14px;
+    color:#777;
+  }
+  
+  .full_container .box-container .box .content_edit{
+    color:crimson;
+    padding-right: 5px;
+  }
+  
+  #load-more{
+    margin-top: 20px;
+    display: inline-block;
+    padding:13px 30px;
+    border:1px solid #334;
+    color:#ae00ff;
+    font-size: 16px;
+    background-color: #a8e94eec;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #load-more:hover{
+    background-color: crimson;
+    border-color: #000000;
+    color:#fff;
+  }
+  
+  @media (max-width:450px){
+  
+    .full_container .heading{
+      font-size: 25px;
+    }
+  
+    .full_container .box-container{
+      grid-template-columns: 1fr;
+    }
+  
+    .full_container .box-container .box .image_edit{
+      height: 200px;
+    }
+  
+    .full_container .box-container .box .content_edit p{
+      font-size: 12px;
+    }
+  
+    .full_container .box-container .box .content_edit {
+      font-size: 12px;
+    }
+  
+  }
+
+/* Offer Page--*/
+
+.offer_top_bg {
+  background-color: #000;
+}
+
+.offerimgedit{
+  height: 60px;
+  width: 60px;
+}
+
+.offerh1{
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.offerpara{
+  color: #7f6c6c;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hr_mdline{
+  color: #ff0000;
+  height: 60px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.hr_smline{
+  color: #ff0000;
+  width: 260px;
+  border-style: solid;
+  border-width: 1px;
+}
+.offer_big_img{
+  background-image: url("offercard2.png");
+  height: 40vh;
+  background-size: cover;
+  text-align: center;
+  color: rgb(54, 209, 142);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.discon_edit{
+  background-color: #d9aeaeb9;
+  border-color: red;
+  border-radius: 20px;
+  border-style: dashed;
+  border-width: 1px;
+  color: #393131;
+  margin: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.discon_edit_h1 {
+  color: red;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.discon_edit_p1 {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.discon_edit_img{
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+}
+
+.brand_img{
+  height: 50px;
+  width: 100%;
+  background-size: cover;
+}
+
+.person_container{
+  background-color: #85bae2;
+  border-color: #0091ff;
+  border-style: groove;
+  border-width: 2px;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.person_inner_container{
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 15px;
+  font-family: Roboto;
+  padding: 10px;
+}
+
+.person_name {
+  color: #ff00bf;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.person_hr{
+  border-width: 1px;
+  border-color: #0091ff;
+  border-style: solid;
+}
+.person_para{
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*-- Container page 
+
+.Container_bg{
+    background-color: #ffffff;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: darkgray;
+    border-style: solid;
+    box-shadow:  5px 5px 15px #000;
+    text-align: center;
+    padding: 20px;
+}
+
+.container_para{
+    color:#000;
+    font-size: 16px;
+    padding-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}--*/
+
+
+
+.outerContainer {
+  background-color: #000;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  font-family: Roboto;
+}
+
+.manfact_main_h1 {
+  color: #F90716;
+  font-size: 26px;
+  font-family: Roboto;
+  font-weight: 500;
+  border-color: red;
+  border-style: dashed;
+  border-width: 1px;
+  background-color: #FFACAC;
+  text-align: center;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.container_img_edit {
+  width: 100%;
+  height: 30vh;
+  border-radius: 50px;
+  background-size: cover;
+  box-shadow: 5px 5px 10px #fff;
+}
+
+.container_h1_edit {
+  font-size: 20px;
+  color: #fff;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.container_hr_edit {
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: skyblue;
+}
+
+.container_para_edit {
+  color: #FFBFA9;
+  font-size: 16px;
+  font-family: impact;
+  font-weight: 500;
+}
+
+.container_label_edit {
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer_bg{
+  background-color: #000;
+}
+
+.footer_h1{
+  color: white;
+  font-family: serif;
+  font-weight: bold;
+  font-size: 36px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.footer_para{
+  color: grey;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.footer_icon {
+  color: red;
+  margin-left: 10px;
+}
+
+.footer_list{
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  padding-top: 20px;
+  list-style: none;
+}

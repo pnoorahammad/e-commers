@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Y.V.D</title>
+        <link rel="icon" type="image/x-icon" href="heading.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <!--<title>Card Slider in HTML & CSS</title>-->
+        <link rel="stylesheet" href="vv.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Coding by CodingLab || www.codinglabweb.com -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Add icon library -->
+        <script src="https://kit.fontawesome.com/56e21f2804.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-secondary nav_text_el">
+            <a class="navbar-brand" id="nav_h1_text" href="#">Y.V.D</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categorySection">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#offerSection">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#partnersection" tabindex="-1" >Bussiness partner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#aboutsection" tabindex="-1" >About US</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav> 
+        <div class="all_page_bg" id="Backgroungchange"> 
+            <!--carsoual-->
+            <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="10000">
+                    <img src="car1.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-interval="2000">
+                    <img src="carspare1.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="car3.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="carspare2.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            <!--Category-->
+            <div id="categorySection">
+                <div class="d-flex flex-row justify-content-between">
+                    <h1 class="Category_h1">Category</h1>
+                    <div>
+                        <button id="Button_bg_Reset" aria-hidden="true" class="btn float-right mt-3 mr-3 reset_button" onclick="changeColorReset()">
+                            Light
+                        </button> 
+                        <button id="Button_bg_Like" aria-hidden="true" class="btn float-right mt-3 mr-3 like_button" onclick="changeColorLike()">
+                            Dark
+                        </button> 
+                    </div>
+                </div>
+            </div>
+                <div class="full_container">  
+                    
+                    <!--Maintenance service Page-->
+                    <div class="box-container">
+                    <div class="box" onclick="display('sectionmanufact')">
+                        <div class="image_edit">
+                            <img src="Maintenance_service_part.webp" class="img-fluid shadow-lg" alt="Responsive image">
+                        </div>
+
+                        <div class="content_edit" data-toggle="modal" data-target="#manfModal">
+                            <h3>Maintenance Service Parts</h3>
+                            <div class="modal fade" id="manfModal" tabindex="-1" aria-labelledby="manfModalLabel" aria-hidden="true">
+                                <div class="modal-dialog mt-5">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title thanking-customers-section-modal-title" id="manfModalLabel">
+                                        Maintenance Service Parts
+                                      </h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="manf1.webp" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Engine Oil 5W-30 (3.5L) (Bosch Fusion Semi Synthetic Motor Oil)</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 1,199 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">1,999</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="manf2.webp" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Synthetic Engine Oil POWER1 Cruise 4T 15W-50 (2.5L)</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 1,249 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">1,999</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="manf3.webp" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Engine Oil 5W-30 (3.5L) (Cool Maker Fully Synthetic Oil)</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 1,449 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">2,499</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="manf4.webp" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Engine Oil 5W-30 (3.5L) (Castrol Magnatec Stop-Start Fully Synthetic Oil)</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 1,999 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">2,599</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="manf5.webp" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Engine Oil 10W-40 (1L) (Cool Maker Fully Synthetic Oil)</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 499 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">999</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Engine-->
+                    <div class="box">
+                        <div class="image_edit">
+                            <img src="car_engin.png" class="img-fluid shadow-lg" alt="Responsive image">
+                        </div>
+                        <div class="content_edit" data-toggle="modal" data-target="#engineModal">
+                            <h3>Engine</h3>
+                            <div class="modal fade" id="engineModal" tabindex="-1" aria-labelledby="engineModalLabel" aria-hidden="true">
+                                <div class="modal-dialog mt-5">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title thanking-customers-section-modal-title" id="engineModalLabel">
+                                        Engine
+                                      </h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="engine1.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">FUEL FILTER ASSY WITH BRACKET</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 6,299 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">7,000</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="engine2.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Air Filter </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 450 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">500</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="engine3.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Air Cleaner Boot</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 649 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">800</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="engine4.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Turbocharger </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 12,999 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">13,500</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="engine5.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Control Valve, air intake</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit"> Currently Unavailable <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;"></span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <!--Car Accessories Tyres and Alloys-->
+                    <div class="box">
+                        <div class="image_edit">
+                            <img src="car_access.png" class="img-fluid shadow-lg" alt="Responsive image">
+                        </div>
+                        <div class="content_edit" data-toggle="modal" data-target="#caraccModal">
+                            <h3>Car Accessories Tyres and Alloys</h3>
+                            <div class="modal fade" id="caraccModal" tabindex="-1" aria-labelledby="caraccModalLabel" aria-hidden="true">
+                                <div class="modal-dialog mt-5">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title thanking-customers-section-modal-title" id="caraccModalLabel">
+                                        Car Accessories Tyres and Alloys
+                                      </h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="caracc.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">4.3/5" LCD Display Universal Car Rear View Camera System </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 1,780 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">2,000</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="caracc2.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Silver Car Body Cover </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 1,050 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">1,200</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="caracc3.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Compact Portable Tyre Inflator Air Pump</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 1,949 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">2,400</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="caracc4.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Alloy Wheel 14"/4 Holes/Pcd-100/Et-45 - Machined Qc8 Black </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 12,699 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">13,500</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="caracc5.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">STEEL WHEEL RIM 5.5J X 14</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 5,484 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;"> 6,500</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <!--Body-->
+                    <div class="box">
+                        <div class="image_edit">
+                            <img src="car_body.png" class="img-fluid shadow-lg" alt="Responsive image">
+                        </div>
+                        <div class="content_edit" data-toggle="modal" data-target="#bodyModal">
+                            <h3>Body</h3>
+                            <div class="modal fade" id="bodyModal" tabindex="-1" aria-labelledby="bodyModalLabel" aria-hidden="true">
+                                <div class="modal-dialog mt-5">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title thanking-customers-section-modal-title" id="bodyModalLabel">
+                                        Body
+                                      </h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="body1.webp" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Finger Guard Sticker (Set of 4)</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 299 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">569</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="body2.webp" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Universal Door Edge Guard Silver (Set of 4)</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 150 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">200</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="body3.webp" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">CARGO ASSY 1630 - ED COATED</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 29,449 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">33,499</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="body4.webp" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">EMBLEM, FR (H)</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 999 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">1,500</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="body5.webp" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Door Visor</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 1,000 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">2,099</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <!--Break System , Belts and Bearings-->
+                    <div class="box">
+                        <div class="image_edit">
+                            <img src="car_break.png" class="img-fluid shadow-lg" alt="Responsive image">
+                        </div>
+                        <div class="content_edit"  data-toggle="modal" data-target="#breakModal">
+                            <h3>Break System , Belts and Bearings</h3>
+                            <div class="modal fade" id="breakModal" tabindex="-1" aria-labelledby="breakModalLabel" aria-hidden="true">
+                                <div class="modal-dialog mt-5">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title thanking-customers-section-modal-title" id="breakModalLabel">
+                                        Break System , Belts and Bearings
+                                      </h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="break1.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Tensioner Pulley, Timing Belt </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 569 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">1,000</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="break2.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Timing Belt </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 950 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">1,000</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="break3.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Repair Kit</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 8,649 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">8,800</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="break4.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">ESP UNIT </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 21,699 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">22,500</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="break5.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">ACTUATOR SUB ASSY</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 20,484 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;"> 22,000</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <!--Interior and Comfort-->
+                    <div class="box">
+                        <div class="image_edit">
+                            <img src="car_inter.png" class="img-fluid shadow-lg" alt="Responsive image">
+                        </div>
+                        <div class="content_edit" data-toggle="modal" data-target="#interModal">
+                            <h3>Interior and Comfort</h3>
+                            <div class="modal fade" id="interModal" tabindex="-1" aria-labelledby="interModalLabel" aria-hidden="true">
+                                <div class="modal-dialog mt-5">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title thanking-customers-section-modal-title" id="interModalLabel">
+                                        Interior and Comfort
+                                      </h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="inter1.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Front Power Window Switch Right </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 982 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">1,000</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="inter2.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">HOLDER SUB-ASSY, INS </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 2,050 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">2,200</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="inter3.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">MODULE ASSY, AIRBAG</h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 5,949 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">6,400</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="inter4.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">PU Leather Center Armrest Console with Pocket (Beige Brown) </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 5,699 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;">6,500</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="outerContainer">
+                                                <img src="inter5.png" class="container_img_edit" />
+                                                <h1 class="container_h1_edit">Center Armrest Console Cover </h1>
+                                                <hr class="container_hr_edit">
+                                                <p class="container_para_edit">₹ 5,484 <span class="pl-5" style="text-decoration: line-through; font-weight: 500; color: grey;"> 6,500</span></p>
+                                                <label for="file" class="container_label_edit">Total Sold: <span style="color: yellow;">567 Out of 700</span></label>
+                                                <progress id="file" value="72" max="100" class="ml-2 mt-2">72%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+
+                    </div>
+                    <div id="load-more" class="btn btn-outline-warning"> load more </div>
+                </div>
+
+            <!--Offer Section-->
+            <div id="offerSection">
+                <div class="offer_top_bg">
+                    <div class="pt-4 pb-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="d-flex flex-md-row flex-sm-coloumn justify-content-center">
+                                        <img src="freedeliv.png" class="offerimgedit"/>
+                                        <div class="ml-3 mt-3">
+                                            <h1 class="offerh1">Free Home Delivery</h1>
+                                            <p class="offerpara">Safe and secure Delivery</p>
+                                        </div>
+                                        <div class="pl-3 d-none d-md-block">
+                                            <hr class="hr_mdline">
+                                        </div>
+                                    </div>
+                                    <div class="d-block d-md-none">
+                                        <hr class="hr_smline">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="d-flex flex-md-row flex-sm-coloumn  justify-content-center">
+                                        <img src="quality.png" class="offerimgedit pt-2"/>
+                                        <div class="ml-3 mt-3">
+                                            <h1 class="offerh1">Quality Products</h1>
+                                            <p class="offerpara">Only parts from trusted brands</p>
+                                        </div>
+                                        <div class="pl-3 d-none d-md-block">
+                                            <hr class="hr_mdline">
+                                        </div>
+                                    </div>
+                                    <div class="d-block d-md-none">
+                                        <hr class="hr_smline">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="d-flex  flex-md-row flex-sm-coloumn  justify-content-center ">
+                                        <img src="onlinesupp.png" class="offerimgedit"/>
+                                        <div class="ml-3 mt-3">
+                                            <h1 class="offerh1">Online Support</h1>
+                                            <p class="offerpara">24 % 7 online support</p>
+                                        </div>
+                                        <div class="pl-3 d-none d-md-block">
+                                            <hr class="hr_mdline">
+                                        </div>
+                                    </div>
+                                    <div class="d-block d-md-none">
+                                        <hr class="hr_smline">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="d-flex flex-md-row flex-sm-coloumn justify-content-center ">
+                                        <img src="exp.png" class="offerimgedit pt-2"/>
+                                        <div class="ml-3 mt-3">
+                                            <h1 class="offerh1">Experience Workers</h1>
+                                            <p class="offerpara">World class experience Labour's</p>
+                                        </div>
+                                        <div class="pl-3 d-none d-md-block">
+                                            <hr class="hr_mdline">
+                                        </div>
+                                    </div>
+                                    <div class="d-block d-md-none">
+                                        <hr class="hr_smline">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer_big_img pt-5 pb-5">
+                    <div class="d-block flex-column justify-content-center">
+                        <p style="color: aliceblue; font-size: 26px;">HURRY UP!..</p>
+                        <h1 style="font-size: 36px;">HOT DEAL! SALE  <span style="color: red; text-decoration: double;"> 20% OFF</span></h1>
+                    </div>
+                </div>
+                <div class="discon_edit d-flex flex-row justify-content-center">
+                    <img src="giftimg.jpg" class="d-none d-md-block discon_edit_img mt-5 mr-5 shadow-lg" />
+                    <div class="ml-5 mr-5">
+                        <h1 class="discon_edit_h1">30%</h1>
+                        <p class="discon_edit_p1">Super discount for your first purchase</p>
+                        <p>Use discount code in checkout page.</p>
+                        <h1 class="discon_edit_h1">FREE30FIRST</h1>
+                    </div> 
+                    <img src="gift2.jpg" class="discon_edit_img d-none d-md-block ml-5 mt-5 shadow-lg"/>  
+                </div>
+            </div>
+
+            <!--Person Page-->
+            <div id="partnersection">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 style="color: #780083; font-size: 36px; text-decoration: underline;" class="mb-3">Bussiness partner</h1>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://www.bosch.in/" target="_blank"><img src="brand1.png" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://www.unominda.com/" target="_blank"><img src="brand2.png" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://sheenshine.business.site/" target="_blank"><img src="brand3.webp" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://www.zipfilters.com/" target="_blank"><img src="brand4.webp" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://www.igbtigril.com/" target="_blank" ><img src="brand5.webp" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://roulunds-braking.eu/" target="_blank" ><img src="brand6.webp" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://www.motherson.com/" target="_blank" ><img src="brand7.webp" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://technixindia.com/" target="_blank" ><img src="brand8.webp" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://www.valeo.com/" target="_blank" ><img src="brand9.webp" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://www.who.int/activities/what-is-PHC" target="_blank" ><img src="brand10.webp" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://www.elofic.com/" target="_blank" ><img src="brand111.webp" class="m-3 brand_img"/></a>
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="https://aftermarket.zf.com/go/en/sachs/home/" target="_blank"><img src="brand12.webp" class="m-3 brand_img"/></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 pt-4">
+                                <h1 style="color: #3030e4; font-family: impact;">Our's Clients <span style="color: #8400ff;">Love</span></h1>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="person_inner_container">
+                                    <h1 class="person_name">Viknesh</h1>
+                                    <hr class="person_hr">
+                                    <p class="person_para">Fast, fair and affordable. I took my car in for rear struts, and they were much cheaper than when I’d had the front ones done a few months prior at [large national chain].</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="person_inner_container">
+                                    <h1 class="person_name">Amala kaure</h1>
+                                    <hr class="person_hr">
+                                    <p class="person_para">Ive been using this mechanic shop for over 8 years. Hes very knowledgeable, trustworthy, fair, and clear. He has experience in many makes. Highly recommend without reservation..</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="person_inner_container">
+                                    <h1 class="person_name">Shashank kumar</h1>
+                                    <hr class="person_hr">
+                                    <p class="person_para">Catlogs and price are always up to date.it is very helpfull</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="person_inner_container">
+                                    <h1 class="person_name">Raja Muthu</h1>
+                                    <hr class="person_hr">
+                                    <p class="person_para">Really awesome place. I had received excellent customer service upon my arrival I loved it. They also are the only TRIPLE AAA Certified auto Shop in the area.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="person_inner_container">
+                                    <h1 class="person_name">Brintha</h1>
+                                    <hr class="person_hr"> 
+                                    <p class="person_para">Solid service. These guys are knowledgeable and professional. I will definitely come back with my Highlander</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="person_inner_container">
+                                    <h1 class="person_name">Subramaniyan</h1>
+                                    <hr class="person_hr">
+                                    <p class="person_para">I'm using Y.V.D to order spares parts for my workshop. Delivery is always fast, price are very competitive</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--About Us-->
+
+                <div id="aboutsection">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 style="color: #ef0064; font-size: 36px; font-weight: bold;" class="m-3">About Us</h1>
+                                <div style="background-color: #fff;" class="shadow-lg m-5 p-5">
+                                    <p style="color: #000; font-size: 16px;"><span style="color: #3030e4; font-size: 26px; font-weight: bold;">YVD.COM</span><br>
+                                        Using your own car gives you independence from external circumstances and the opportunity to plan your day exactly how you want. No rush to miss urban transport and even be late for work, because of outside factors. With your own car, you feel free and have the ability to address business and pleasure travel, as you want. All these reasons have a huge influence on the number of vehicles, on the road. Among them are passenger cars, lorries, buses, etc. Bringing this into focus: in 1986 there were only 500 million cars in the whole world. And in 2010 the number increased to 1 billion vehicles. Researchers with the International Energy Agency suggest that by the year 2035 nearly 25 percent of the world population will own a car. According to research, the current number is going to increase to 1,7 billion. That's why auto car spare parts are in demand among car owners. YVD.com is a car parts marketplace in India, which pursues the aim to organize the replacement parts market and make the shopping process easier and more convenient.
+                                        <br>
+                                        <span style="color: #3030e4; font-size: 26px; font-weight: bold;">The offer from YVD.com</span><br>
+                                        Our project was established in 2015. Over this time we have been working on our goal – to help customers and suppliers in auto car spare parts sales and communication. This advertising platform was created to make online shopping easier for both automobile owners and parts dealers. Customers get an opportunity to buy car parts online, which are branded and original. Our continuously updated catalogs are filled with replacement parts, with well-known, and highly regarded brands. This provides auto parts suppliers with the ability to offer their products, communicate with clients, and increase sales along with their market share.
+                                        <br>
+                                        <span style="color: #3030e4; font-size: 26px; font-weight: bold;">How do we work: key features of YVD.com</span><br>
+                                        Clear and transparent offers. We do not promote any particular suppliers, all parts are sorted by producers' information and filtered by customers’ choice. Quick and competent service. If any problems occur, YVD.com will put its best foot forward to solve issues. Easy to read catalogs, with the latest offers. Every day new products with actual prices appear. Simple and easy-to-understand website. We created it be both useful and mobile-friendly, so our visitors can order car parts from personal computers, laptops, tablets, or smartphones.
+                                        <br>
+                                        <span style="color: #3030e4; font-size: 26px; font-weight: bold;">3 main reasons to choose YVD.com</span><br>
+                                        1. 10 Days Assured Return. If spare part will not be applicable to your car we will initiate the return process after your request. The return process is very smooth and simple.
+                                        <br>
+                                        2. We are creating our catalogs by collecting relevant information from the market. We are responsible for Product description and keep our Sellers responsible for offer terms and genuinity of the product sold. 
+                                        <br>
+                                        3. Free website usage. There is no additional payment for auto car spare parts buyers. Only sellers have to pay a marketing fee.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Footer section-->
+            <div class="footer_bg pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <div class="d-flex flex-column justify-content-center">
+                                <h1 class="footer_h1 text-md-left text-center">Y.V.D</h1>
+                                <p class="footer_para text-md-left text-center">India's biggest online marketplace <br> for car spare parts and service</p>
+                                <div class=" text-md-left text-center">
+                                    <i class="fa-brands fa-youtube footer_icon"></i>
+                                    <i class="fa-brands fa-twitter footer_icon"></i>
+                                    <i class="fa-brands fa-instagram footer_icon"></i>
+                                    <i class="fa-brands fa-linkedin footer_icon"></i>
+                                    <i class="fa-brands fa-facebook footer_icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <ul class="footer_list">
+                                <a href="#categorySection"><li>Category</li></a>
+                                <a href="#offerSection"><li>Offers</li></a>
+                                <a href="#partnersection"><li>Bussiness partner</li></a>
+                                <a href="#aboutsection"><li>About Us</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <!--JAVA SCRIPT-->
+        
+        <script>
+            function changeColorLike(){
+                document.getElementById("Backgroungchange").style.backgroundColor = "#000";
+                document.getElementById("Button_bg_Like").style.backgroundColor = "grey";
+                document.getElementById("Button_bg_Reset").style.backgroundColor = "red";
+            }
+            function changeColorReset(){
+                document.getElementById("Backgroungchange").style.backgroundColor = "#fff";
+                document.getElementById("Button_bg_Like").style.backgroundColor = "#6cff80";
+                document.getElementById("Button_bg_Reset").style.backgroundColor = "grey";
+            }
+
+            let loadMoreBtn = document.querySelector('#load-more');
+            let currentItem = 3;
+            
+            loadMoreBtn.onclick = () =>{
+               let boxes = [...document.querySelectorAll('.full_container .box-container .box')];
+               for (var i = currentItem; i < currentItem + 3; i++){
+                  boxes[i].style.display = 'inline-block';
+               }
+               currentItem += 3;
+            
+               if(currentItem >= boxes.length){
+                  loadMoreBtn.style.display = 'none';
+               }
+            }
+        </script>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    </body>
+</html>
